@@ -2,7 +2,7 @@ import Moneda from '../models/monedas.js'
 import MonedaUsuario from '../models/monedaUsuario.js'
 
 export const getAllMonedas = async (req, res) => {
-  const response = await Moneda.find()
+  const response = await Moneda.find().sort({name:"ascending"})
   res.json(response)
 }
 
